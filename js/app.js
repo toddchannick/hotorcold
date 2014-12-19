@@ -34,14 +34,33 @@ $(document).ready(function() {
 		$('input').val('');
 	};
 
+	var readOnlyLoser = function(){
+		$('input').val('');
+		$('input').attr('placeholder', 'GAME OVER');
+		$('input').attr('readonly',true);
+	};
+
+	var readOnlyWinner = function(){
+	$('input').val('');
+	$('input').attr('placeholder', 'WINNER!');
+	$('input').attr('readonly',true);
+	};
+
+	var readOnlyOff = function(){
+		$('input').val('')
+		$('input').attr('placeholder', 'Any number, 1-100');
+		$('input').attr('readonly',false);
+	};
+
 	/*-----starts a new game-----*/
 	var playGame = function(){
+		clearGuesses();
 		computerNumber = generateRandomNum();
+		readOnlyOff();
 		$('input').focus();
 	};
 
-
-
+	
 
 /*---STARTS THE GAME!(function described above)---*/
 playGame();
@@ -95,6 +114,7 @@ playGame();
 				guessList.append('<li class="correct">'+userNum+'</li>');
 				winStreak ++;
 				guess.val('');
+				readOnlyWinner();
 				winArea.text('');
 				winArea.append('Win Streak: '+winStreak);
 			};
@@ -108,6 +128,7 @@ playGame();
 		guessStatus.append('<p><span class="hot-status">GAME OVER!</span><br><span class="lower-text">You are only allowed 8 guesses! New game?</span></p>');
 		winStreak = 0;
 		winArea.text('');
+		readOnlyLoser();
 		console.log(winStreak);
 	};
 
@@ -156,6 +177,7 @@ playGame();
 						winStreak ++; 
 						guess.val('');
 						winArea.text('');
+						readOnlyWinner();
 						winArea.append('Win Streak: '+winStreak);
 						console.log(winStreak);
 					};
@@ -169,6 +191,7 @@ playGame();
 				guessStatus.append('<p><span class="hot-status">GAME OVER!</span></p><p><span class="lower-text">You are only allowed 8 guesses! <span id="new">New game?</span></span></p>');
 				winStreak = 0;
 				winArea.text('');
+				readOnlyLoser();
 				console.log(winStreak);
 			};
 		};
