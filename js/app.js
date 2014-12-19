@@ -125,7 +125,7 @@ playGame();
 		};
 	}
 	else {
-		guessStatus.append('<p><span class="hot-status">GAME OVER!</span><br><span class="lower-text">You are only allowed 8 guesses! New game?</span></p>');
+		guessStatus.append('<p><span class="hot-status">GAME OVER!</span><br><span class="lower-text">You are only allowed 8 guesses! <span id="new">New game?</span></span></p>');
 		winStreak = 0;
 		winArea.text('');
 		readOnlyLoser();
