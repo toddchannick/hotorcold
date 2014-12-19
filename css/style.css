@@ -1,0 +1,346 @@
+/*--------style reset -------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+	display:block;
+	list-style: none;
+}
+
+/*------------ My Stylesheet -------------------*/
+*{
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+@font-face{
+  font-family: title;
+  src: url('../fonts/DK Hobgoblin.otf');
+}
+
+html {
+	display:block;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color:#452415;
+	height:100%;
+	width:100%;
+	font-family:sans-serif;
+}
+
+.main-content {
+	background-color:#0F4A44;
+	position:relative;
+	top:1em;
+	height:900px;
+	width:90%;
+	min-width:600px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:1em;
+	border-radius:1em;
+	box-shadow: 10px 10px 10px #1F1D1A;
+}
+
+#top-nav-wrap {
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+	background-color:#809694;
+	width:100%;
+	position:relative;
+	height:10em;
+	line-height:10.5em;
+}
+
+#top-nav {
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+nav p {
+	font-family:title;
+	font-size:4em;
+	text-align:center;
+}
+
+#main-nav-wrap {
+	background-color:#072421;
+	width:100%;
+	height:3em;
+	line-height:3em;
+	position:relative;
+}
+
+#main-nav {
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	height:3em;
+	position:relative;
+}
+
+#top-links li {
+	cursor:pointer;
+	color:#809694;
+	font-size:1em;
+	font-family:sans-serif;
+	display:inline-block;
+	width:10em;
+	margin-right:2em;
+}
+
+#top-links li:hover {
+	color:#809694;
+	font-size:1em;
+	font-weight:600;
+	font-family:sans-serif;
+	display:inline-block;
+	margin-right:2em;
+}
+
+li.selected {
+	display:hidden;
+	color:#809694;
+	font-size:1em;
+	font-weight:600;
+	font-family:sans-serif;
+	display:inline-block;
+	margin-right:2em;
+}
+
+#game-area-wrap {
+	position:relative;
+	top:2em;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	height:28em;
+	background-color:#072421;
+	padding:2em;
+	color:#809694;
+	box-shadow: 10px 10px 10px #1F1D1A;
+}
+
+#explanation {
+	width:100%;
+	height:2em;
+	color:#809694;
+	font-size:.8em;
+	line-height:150%;
+}
+
+#guess-area {
+	position:relative;
+	top:4em;
+	text-align:center;
+	width:100%;
+	color:#809694;
+	font-size:1em;
+}
+
+input {
+	margin-left:.5em;
+	margin-top:.2em;
+    border: none;
+    border-radius: 0px;
+    font-size: 10pt;
+    height: 2.1em;
+    padding-left:.4em;
+}
+
+.guess-submit {
+	margin-left:3.5em;
+	height:2.5em;
+}
+
+#guess-status {
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	height:8em;
+	position:relative;
+	top:7em;
+}
+
+#guess-status p {
+	font-size:3em;
+	font-weight:200;
+	text-align:center;
+}
+
+.lower-text {
+	font-size:.4em;
+	font-weight:100;
+	text-align:center;
+}
+
+#new {
+	color:#FF6A38;
+	cursor:pointer;
+	font-weight:600;
+}
+
+#new:hover {
+	color:#FF3838;
+	cursor:pointer;
+	font-weight:800;
+}
+
+.new-game {
+	float:right;
+	margin-top:-1em;
+}
+
+.new-game:hover {
+	cursor:pointer;
+	float:right;
+	margin-top:-1em;
+	color:#FF3838;
+}
+
+.cold-status {
+	font-weight:800;
+	color:#3860FF;
+}
+
+.warm-status {
+	font-weight:800;
+	color:#FF9C38;
+}
+
+.hot-status {
+	font-weight:800;
+	color:#FF6A38;
+}
+
+.burning-status {
+	font-weight:800;
+	color:#FF3838;
+}
+
+.correct-status {
+	font-weight:800;
+	color:#FF3838;
+}
+
+
+#your-guesses {
+	color:black;
+	position:relative;
+	padding:1em;
+	margin-left:-2em;
+	margin-right:-2em;
+	top:8.5em;
+	height:6em;
+	background-color:#809694;
+}
+
+#your-guesses p{
+	font-family:title;
+	font-size:1.5em;
+}
+
+#guess-list {
+	float:left;
+}
+
+ul#guess-list li{
+	display:inline-block;
+	margin-left:1em;
+	margin-right:1em;
+	margin-bottom:1em;
+	font-weight:900;
+}
+
+.win-streak {
+	float:right;
+	font-size:.8em;
+}
+
+.cold {
+	color:#3860FF;
+}
+
+.warm {
+	color:#FF9C38;
+}
+
+.hot {
+	color:#FF6A38;
+}
+
+.burning {
+	color:#FF3838;
+}
+
+.correct {
+	color:#FF3838;
+}
+
+
+/*
+#game-left {
+	position:relative;
+	float:left;
+	top:2em;
+	left:2em;
+	width:35%;
+	height:15em;
+	background-color:#965A3D;
+}
+*/
+
