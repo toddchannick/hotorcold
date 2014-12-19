@@ -110,7 +110,7 @@ playGame();
 				guess.val('');
 			}
 			else if (absDifference == 0){
-				guessStatus.append('<p>'+userNum+' is... <span class="correct-status">CORRECT!</span></p>');
+				guessStatus.append('<p>'+userNum+' is... <span class="correct-status">CORRECT!</span></p><p><span class="lower-text">Great Job! <span id="new">New game?</span></span></p>');
 				guessList.append('<li class="correct">'+userNum+'</li>');
 				winStreak ++;
 				guess.val('');
