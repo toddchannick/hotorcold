@@ -210,6 +210,7 @@ input {
     border-radius: 0px;
     font-size:1.1em;
     padding:.4em;
+    width:12em;
 }
 
 .guess-submit {
