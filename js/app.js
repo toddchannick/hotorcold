@@ -49,7 +49,7 @@ $(document).ready(function() {
 	};
 
 	var readOnlyOff = function(){
-		$('.guess-submit').attr('enabled','enabled');
+		$('.guess-submit').removeAttr('disabled');
 		$('input').val('')
 		$('input').attr('placeholder', 'Any number, 1-100');
 		$('input').attr('readonly',false);
