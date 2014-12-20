@@ -35,18 +35,21 @@ $(document).ready(function() {
 	};
 
 	var readOnlyLoser = function(){
+		$('.guess-submit').attr('disabled','disabled');
 		$('input').val('');
 		$('input').attr('placeholder', 'GAME OVER');
 		$('input').attr('readonly',true);
 	};
 
 	var readOnlyWinner = function(){
-	$('input').val('');
-	$('input').attr('placeholder', 'WINNER!');
-	$('input').attr('readonly',true);
+		$('.guess-submit').attr('disabled','disabled');
+		$('input').val('');
+		$('input').attr('placeholder', 'WINNER!');
+		$('input').attr('readonly',true);
 	};
 
 	var readOnlyOff = function(){
+		$('.guess-submit').attr('enabled','enabled');
 		$('input').val('')
 		$('input').attr('placeholder', 'Any number, 1-100');
 		$('input').attr('readonly',false);
