@@ -10,8 +10,10 @@ $(document).ready(function() {
 	var difference;
 	var guessStatus = $('#guess-status');
 	var guessList = $('#guess-list');
+	var bestWinArea = $('.best')
 	var winArea = $('.wins')
 	var winStreak = 0;
+	var bestWinStreak = 0;
 
 
 
@@ -120,6 +122,12 @@ playGame();
 				readOnlyWinner();
 				winArea.text('');
 				winArea.append('Win Streak: '+winStreak);
+				if (winStreak > bestWinStreak){
+							bestWinStreak = winStreak;
+							bestWinArea.text('');
+							bestWinArea.append('Best Win Streak: '+bestWinStreak);
+						}
+						console.log("Best win streak: "+bestWinStreak);
 			};
 		}
 		else {
@@ -183,6 +191,12 @@ playGame();
 						readOnlyWinner();
 						winArea.append('Win Streak: '+winStreak);
 						console.log(winStreak);
+						if (winStreak > bestWinStreak){
+							bestWinStreak = winStreak;
+							bestWinArea.text('');
+							bestWinArea.append('Best Win Streak: '+bestWinStreak);
+						}
+						console.log("Best win streak: "+bestWinStreak);
 					};
 				}
 				else {

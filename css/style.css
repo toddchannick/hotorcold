@@ -320,7 +320,7 @@ input {
 	margin-left:-2em;
 	margin-right:-2em;
 	top:8.5em;
-	height:6em;
+	height:7.5em;
 	background-color:#809694;
 }
 
@@ -344,7 +344,18 @@ ul#guess-list li{
 .win-streak {
 	float:right;
 	font-size:.8em;
+	text-align:right;
 }
+
+.bestwins {
+	float:right;
+	font-size:.8em;
+	position:absolute;
+	bottom:.8em;
+	right:1.2em;
+}
+
+
 
 .cold {
 	color:#3860FF;
